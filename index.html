@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Casio PX-S1100 | GRAND PIANO CONCERT</title>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .logo {
+            width: 160px;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        #waveform {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/CASIO_logo.svg/2560px-CASIO_logo.svg.png" class="logo" alt="Casio Logo">
+    <div class="title">PX-S1100 | GRAND PIANO CONCERT</div>
+    <div class="subtitle">原音录制 | 官方音源预览</div>
+    <div id="waveform"></div>
+    <div class="controls">
+        <button onclick="wavesurfer.playPause()">播放 / 暂停</button>
+    </div>
+
+    <script>
+        const wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#999',
+            progressColor: '#333',
+            height: 100,
+            responsive: true
+        });
+        wavesurfer.load('PX-S1100_GRAND_PIANO_CONCERT_2.mp3');
+    </script>
+</body>
+</html>
